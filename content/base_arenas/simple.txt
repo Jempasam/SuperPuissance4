@@ -9,5 +9,5 @@ ARENA{
 
 	OBJECTS[ =object:plateforme ]
 	
-	NAME: arena:test
+	NAME: arena:simple
 }

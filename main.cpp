@@ -31,6 +31,9 @@ int main()
     std::getline(file,line);
     loadContent(line);
     file.close();
+    srand(time(0));
+    rand();
+    rand();
 
     if(content::arenas.size()>0)
         useArena(global::terrain,content::arenas[getRandomNumber(content::arenas.size()-1)]);

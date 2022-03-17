@@ -1,5 +1,9 @@
 # Puissance 4
-Real time Connect4, with 2 players and special move and field.
+Real time Connect4, with 2 players and special move and many fields.
+![Connect4 Screenshot](img/img1.png)
+![Connect4 Screenshot](img/img2.png)
+![Connect4 Screenshot](img/img3.png)
+![Connect4 Screenshot](img/img4.png)
 
 ## Controls
 ### Player 1

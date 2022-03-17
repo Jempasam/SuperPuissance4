@@ -15,4 +15,4 @@ INPACK base LOAD[ player_objects player_associations ]
 INMAIN LOAD[ spawners ]
 INPACK base_teams LOAD[ team ]
 
-INPACK base_arenas LOAD[ simple ]
+INPACK base_arenas LOAD[ simple double empty ]
