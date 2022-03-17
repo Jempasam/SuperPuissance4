@@ -1,0 +1,9 @@
+
+
+LOAD[
+	script/static
+	script/falling
+	script/climbing
+]
+
+

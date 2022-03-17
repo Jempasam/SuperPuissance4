@@ -1,0 +1,5 @@
+OBJECT{
+	TEXTURE[ ((texture jeton-w setTexDimension color #color_red# #color_green# #color_blue# #color_alpha#)draw ( color 255 255 255 255 texture jeton-w2 )draw) ]
+	VARIABLES[ #teamnum# ]
+	NAME: object:jeton#team#
+}

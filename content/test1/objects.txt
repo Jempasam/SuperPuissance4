@@ -1,0 +1,15 @@
+OBJECT{
+	TEXTURE[ ((texture jeton-w setTexDimension 20 20 color 0 60 200 255)draw ( color 255 255 255 255 texture jeton-w2 )draw) ]
+	VARIABLES[ 0 ]
+	NAME: object:jetonbleu
+}
+OBJECT{
+	TEXTURE[ ((texture jeton-w setTexDimension 20 20 color 255 0 0 255)draw ( color 255 255 255 255 texture jeton-w2 )draw) ]
+	VARIABLES[ 1 ]
+	NAME: object:jetonrouge
+}
+
+OBJECT{
+	TEXTURE[ plateforme ]
+	NAME: object:plateforme
+}

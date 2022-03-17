@@ -1,0 +1,101 @@
+FUNCTION{
+	-ifKeyPressed 0
+		( offset 0 1 )
+		-ifOneState = tag=tag:traversable
+			-setState =state:static
+			-if didAssociate = true
+				-setMenu objectvar=0
+			-endIf
+			-break
+		-endIf
+	-endIf
+	( offset 0 1 )
+	-ifOneState = tag=tag:solid
+		-setState =state:static
+		-if didAssociate = true
+			-setMenu objectvar=0
+		-endIf
+		-break
+	-endIf
+} function:stop
+
+FUNCTION{
+	-include function:stop
+	-move 0 1
+} function:falling
+
+FUNCTION{
+	( offset 1 1 )
+	-ifOneState = tag=tag:solid
+		-include function:stop
+	-endIf
+		
+	( offset 0 1 )
+	-ifOneState = tag=tag:solid
+		-move 1 0
+	-endIf
+	-move 0 1
+} function:glisse_d
+
+FUNCTION{
+	( offset -1 1 )
+	-ifOneState = tag=tag:solid
+		-include function:stop
+	-endIf
+		
+	( offset 0 1 )
+	-ifOneState = tag=tag:solid
+		-move -1 0
+	-endIf
+	-move 0 1
+} function:glisse_g
+
+SCRIPT{
+	{ 10 }
+	{ 1
+		-include =function:falling
+	}
+
+	NAME:
+	script:falling
+}
+
+SCRIPT{
+	{ 10 }
+	{ 0
+		-include =function:glisse_d
+	}
+
+	NAME:
+	script:glisse_d
+}
+
+SCRIPT{
+	{ 10 }
+	{ 0
+		-include =function:glisse_g
+	}
+
+	NAME:
+	script:glisse_g
+}
+
+STATE{
+	COLOR: rgba: 255 255 255 200
+	SCRIPT: =script:falling
+	NAME: state:falling
+}
+STATE{
+	COLOR: rgba: 255 255 255 200
+	TEXTURE[ glisse-d ]
+	ICONTEX: 0
+	SCRIPT: =script:glisse_d
+	NAME: state:falling_d
+}
+STATE{
+	COLOR: rgba: 255 255 255 200
+	TEXTURE[ glisse-g ]
+	ICONTEX: 0
+	SCRIPT: =script:glisse_g
+	NAME: state:falling_g
+}

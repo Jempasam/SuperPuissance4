@@ -1,0 +1,9 @@
+OBJECT{
+	TEXTURE[ plateforme ]
+	NAME: object:plateforme
+}
+
+OBJECT{
+	TEXTURE[ passoire ]
+	NAME: object:passoire
+}

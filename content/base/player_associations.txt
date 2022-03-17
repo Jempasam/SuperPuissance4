@@ -1,0 +1,27 @@
+ASSOCIATION{
+	[ ZONE: 0 0 3 0 STATE[ tag=tag:associable ] OBJECT[ =object:jeton#team# ] ]
+}
+ASSOCIATION{
+	[ ZONE: 0 0 0 3 STATE[ tag=tag:associable ] OBJECT[ =object:jeton#team# ] ]
+}
+ASSOCIATION{
+	[ ZONE: 0 0 0 0 STATE[ tag=tag:associable ] OBJECT[ =object:jeton#team# ] ]
+	[ ZONE: 1 1 1 1 STATE[ tag=tag:associable ] OBJECT[ =object:jeton#team# ] ]
+	[ ZONE: 2 2 2 2 STATE[ tag=tag:associable ] OBJECT[ =object:jeton#team# ] ]
+	[ ZONE: 3 3 3 3 STATE[ tag=tag:associable ] OBJECT[ =object:jeton#team# ] ]
+}
+ASSOCIATION{
+	[ ZONE: 3 0 3 0 STATE[ tag=tag:associable ] OBJECT[ =object:jeton#team# ] ]
+	[ ZONE: 2 1 2 1 STATE[ tag=tag:associable ] OBJECT[ =object:jeton#team# ] ]
+	[ ZONE: 1 2 1 2 STATE[ tag=tag:associable ] OBJECT[ =object:jeton#team# ] ]
+	[ ZONE: 0 3 0 3 STATE[ tag=tag:associable ] OBJECT[ =object:jeton#team# ] ]
+}
+
+MENU{
+	[ POSITION: 0 0 SIZE: windowwidth windowheight TYPE: picture TEXTURE[ menubackground ] TEXTURENUM: 0 ]
+	[
+		POSITION: windowwidth/4 -windowwidth*3/10+windowheight/2 SIZE: windowwidth/2 windowwidth*3/10 TYPE: picture TEXTURENUM: 0
+		TEXTURE[ ((texture victoire-w setTexDimension color #color_red# #color_green# #color_blue# #color_alpha#)draw) ]
+	]
+	NAME: menu:victoire#team#
+}

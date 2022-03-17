@@ -1,0 +1,51 @@
+SCRIPT{
+	{ 6666 }
+NAME:
+script:static
+}
+
+STATE{
+	COLOR: rgba: 255 255 255 255
+	SCRIPT: =script:static
+	NAME: state:static
+}
+STATE{
+	COLOR: rgba: 255 255 255 150
+	SCRIPT: =script:static
+	NAME: state:passoire
+}
+STATE{
+	COLOR: rgba: 255 255 255 255
+	TEXTURE[ climb ]
+	ICONTEX: 0
+	SCRIPT: =script:static
+	NAME: state:climbed
+}
+
+TAG{
+	IDS[
+		=state:climbed
+		=state:static
+	]
+	NAME: tag:solid
+}
+TAG{
+	IDS[
+		=state:static
+		=state:passoire
+	]
+	NAME: tag:climbable
+}
+TAG{
+	IDS[
+		=state:passoire
+	]
+	NAME: tag:traversable
+}
+TAG{
+	IDS[
+		=state:static
+		=state:climbed
+	]
+	NAME: tag:associable
+}

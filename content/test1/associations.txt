@@ -1,0 +1,24 @@
+ASSOCIATION{
+	[ ZONE: 0 0 3 0 STATE: =state:static OBJECT: =object:jeton#team# ]
+}
+ASSOCIATION{
+	[ ZONE: 0 0 0 3 STATE: =state:static OBJECT: =object:jeton#team# ]
+}
+ASSOCIATION{
+	[ ZONE: 0 0 0 0 STATE: =state:static OBJECT: =object:jeton#team# ]
+	[ ZONE: 1 1 1 1 STATE: =state:static OBJECT: =object:jeton#team# ]
+	[ ZONE: 2 2 2 2 STATE: =state:static OBJECT: =object:jeton#team# ]
+	[ ZONE: 3 3 3 3 STATE: =state:static OBJECT: =object:jeton#team# ]
+}
+ASSOCIATION{
+	[ ZONE: 3 0 3 0 STATE: =state:static OBJECT: =object:jeton#team# ]
+	[ ZONE: 2 1 2 1 STATE: =state:static OBJECT: =object:jeton#team# ]
+	[ ZONE: 1 2 1 2 STATE: =state:static OBJECT: =object:jeton#team# ]
+	[ ZONE: 0 3 0 3 STATE: =state:static OBJECT: =object:jeton#team# ]
+}
+
+MENU{
+	[ POSITION: 0 0 SIZE: windowwidth windowheight TYPE: picture TEXTURES[ menubackground ] TEXTURENUM: 0 ]
+	[ POSITION: windowwidth/4 -windowwidth*3/10+windowheight/2 SIZE: windowwidth/2 windowwidth*3/10 TYPE: picture TEXTURES[ victoire-#team# ] TEXTURENUM: 0 ]
+	NAME: menu:victoire#team#
+}

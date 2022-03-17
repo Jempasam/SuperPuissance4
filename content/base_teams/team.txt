@@ -1,0 +1,7 @@
+TEAM{
+	NAME: team:#team#
+	SPAWNER: =spawner:#team#
+	COLOR: rgba: #color_red# #color_green# #color_blue# #color_alpha#
+	CURSOR: cursor-#team#
+	CURSOR2: cursor2-#team#
+}

@@ -1,0 +1,11 @@
+CREATETERRAIN 15 15
+
+LOAD[ skin objects static script controls arena ]
+
+( team bleu color_red 80 color_green 110 color_blue 230 color_alpha 255 )
+LOAD[ spawners associations ]
+
+( team rouge color_red 230 color_green 80 color_blue 80 color_alpha 255 )
+LOAD[ spawners associations ]
+
+

@@ -1,0 +1,41 @@
+SPAWNERS{
+	rgba: 0 0 0 0
+
+	OBJECT: =object:jeton#team#
+	STATE: =state:falling
+	TIMER: 100
+	ZONE( 0 0 -1 0 )
+
+	----
+	rgba: 0 0 0 0
+
+	OBJECT: =object:jeton#team#
+	STATE: =state:falling_d
+	TIMER: 100
+	ZONE( 0 0 -1 0 )
+	--
+	OBJECT: =object:jeton#team#
+	STATE: =state:falling_g
+	TIMER: 100
+	ZONE( 0 0 -1 0 )
+	
+	----
+	rgba: 0 0 0 0
+	
+	OBJECT: =object:jeton#team#
+	STATE: =state:climbing
+	TIMER: 100
+	ZONE( 0 0 -1 0 )
+	--
+	OBJECT: =object:jeton#team#
+	STATE: =state:climbing_d
+	TIMER: 100
+	ZONE( 0 0 -1 0 )
+	--
+	OBJECT: =object:jeton#team#
+	STATE: =state:climbing_g
+	TIMER: 100
+	ZONE( 0 0 -1 0 )
+
+	NAME: spawner:#team#
+}

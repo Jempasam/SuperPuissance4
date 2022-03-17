@@ -1,0 +1,113 @@
+SCRIPT{
+	{ 10 }
+	{ 1
+		( offset 0 1 )
+		-ifOneState = tag=tag:solid
+			-setState =state:static
+			-if didAssociate = true
+				-setMenu objectvar=0
+			-endIf
+			-break
+		-endIf
+		-ifKeyPressed 0
+			( offset 1 0 )
+			-ifOneState = tag=tag:climbable
+				-setState =state:climbed
+				-if didAssociate = true
+					-setMenu objectvar=0
+				-endIf
+				-break
+			-endIf
+			( offset -1 0 )
+			-ifOneState = tag=tag:climbable
+				-setState =state:climbed
+				-if didAssociate = true
+					-setMenu objectvar=0
+				-endIf
+				-break
+			-endIf
+		-endIf
+		-move 0 1
+	}
+
+	NAME:
+	script:climbing
+}
+
+SCRIPT{
+	{ 10 }
+	{ 1
+
+		( offset 0 1 )
+		-ifOneState = tag=tag:solid
+			-setState =state:static
+			-if didAssociate = true
+				-setMenu objectvar=0
+			-endIf
+			-break
+		-endIf
+		( offset 1 0 )
+		-ifOneState = tag=tag:climbable
+			-setState =state:climbed
+			-if didAssociate = true
+				-setMenu objectvar=0
+			-endIf
+			-break
+		-endIf
+
+		-move 0 1
+	}
+
+	NAME:
+	script:climbing_d
+}
+
+SCRIPT{
+	{ 10 }
+	{ 1
+
+		( offset 0 1 )
+		-ifOneState = tag=tag:solid
+			-setState =state:static
+			-if didAssociate = true
+				-setMenu objectvar=0
+			-endIf
+			-break
+		-endIf
+		( offset -1 0 )
+		-ifOneState = tag=tag:climbable
+			-setState =state:climbed
+			-if didAssociate = true
+				-setMenu objectvar=0
+			-endIf
+			-break
+		-endIf
+
+		-move 0 1
+	}
+
+	NAME:
+	script:climbing_g
+}
+
+STATE{
+	COLOR: rgba: 255 255 255 200
+	TEXTURE[ climb ]
+	ICONTEX: 0
+	SCRIPT: =script:climbing
+	NAME: state:climbing
+}
+STATE{
+	COLOR: rgba: 255 255 255 200
+	TEXTURE[ climb-g ]
+	ICONTEX: 0
+	SCRIPT: =script:climbing_g
+	NAME: state:climbing_g
+}
+STATE{
+	COLOR: rgba: 255 255 255 200
+	TEXTURE[ climb-d ]
+	ICONTEX: 0
+	SCRIPT: =script:climbing_d
+	NAME: state:climbing_d
+}

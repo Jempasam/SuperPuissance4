@@ -1,0 +1,8 @@
+SCRIPT script:static
+STATE state:static
+LOAD[
+	script/falling
+	script/climbing
+]
+
+

@@ -1,0 +1,88 @@
+SCRIPT{
+	10
+
+	----
+	1
+
+	( offset 0 1 )
+	-ifOneState = =state:static
+		-setState =state:static
+		-if didAssociate = true
+			-setMenu objectvar=0
+		-endIf
+		-break
+	-endIf
+	-move 0 1
+	-setPosition cursorX cursorY
+
+	NAME:
+	script:falling
+}
+
+SCRIPT{
+	10
+
+	----
+	0
+
+	( offset 0 1 )
+	-ifOneState = =state:static
+		( offset 1 1 )
+		-ifOneState = =state:static
+			-setState =state:static
+			-if didAssociate = true
+				-setMenu objectvar=0
+			-endIf
+			-break
+		-endIf
+		-move 1 0
+	-endIf
+	-move 0 1
+
+	NAME:
+	script:glisse_d
+}
+
+SCRIPT{
+	10
+	
+	----
+	0
+
+	( offset 0 1 )
+	-ifOneState = =state:static
+		( offset -1 1 )
+		-ifOneState = =state:static
+			-setState =state:static
+			-if didAssociate = true
+				-setMenu objectvar=0
+			-endIf
+			-break
+		-endIf
+		-move -1 0
+	-endIf
+	-move 0 1
+
+	NAME:
+	script:glisse_g
+}
+
+STATE{
+	COLOR: 255 255 255 200
+	SCRIPT: =script:falling
+	NAME: state:falling
+}
+STATE{
+	COLOR: 255 255 255 200
+	TEXTURE[ glisse-d ]
+	ICONTEX: 0
+	SCRIPT: =script:glisse_d
+	NAME: state:falling_d
+}
+STATE{
+	COLOR: 255 255 255 200
+	TEXTURE[ glisse-g ]
+	ICONTEX: 0
+	SCRIPT: =script:glisse_g
+	NAME: state:falling_g
+}

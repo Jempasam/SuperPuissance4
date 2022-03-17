@@ -1,0 +1,8 @@
+ARENA{
+	POSITION: worldsizex/4 worldsizey*3/4 -worldsizex/4+worldsizex-1 worldsizey*3/4
+	STATES[ =state:static ]
+
+	OBJECTS[ =object:plateforme ]
+
+	NAME: arena:test
+}
